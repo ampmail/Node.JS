@@ -17,17 +17,13 @@ class Model {
     }
 
     isDataSet() {
-        let result = false;
-        if (typeof (this.city) !== 'undefined') {
-            result = true;
-        }
-        return result
+        return (typeof (this.city) == 'undefined') ? (false) : (true);
     }
 }
 
 class View {
     static DEBUG() {
-        return true;
+        return false;
     }
 
     static info(message) {
@@ -54,7 +50,7 @@ class View {
     }
 
     static buttonActive(active) {
-        document.querySelector(startButton).disabled = (active)?(''):('disabled');
+        document.querySelector(startButton).disabled = (active) ? ('') : ('disabled');
     }
 }
 
